@@ -15,7 +15,11 @@
 
     <script>
       (async function () {
-        let { text } = await (await fetch(`/api/message`)).json();
+        let { text } = await (
+          await fetch(
+            `https://feb-my-vanilla-api.azurewebsites.net/api/message`
+          )
+        ).json();
         document.querySelector("#name").textContent = text;
       })();
     </script>
